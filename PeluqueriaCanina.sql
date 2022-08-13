@@ -58,18 +58,7 @@ Values	(001, "2013-03-03", 13, "Lavado", 2350),
 Insert Into Perro (Id_Perro, Nombre, Fecha_Nac, Sexo, Dni_Dueno)
 Values (18, "Mora", "2012-07-29", "Hembra", 21436557);
 
-/*--------------------------------------EJERCICIO NÚMERO 12----------------------------------
-
-Select* 
-From Historial
-order by Fecha;
-
-/*--------------------------------------EJERCICIO NÚMERO 4----------------------------------
-
-Update Perro Set Fecha_Nac = "2012-08-11"
-where Id_Perro = 14;
-
-/*--------------------------------------EJERCICIO NÚMERO 5----------------------------------*/ 
+/*--------------------------------------EJERCICIO NÚMERO 12---------------------------------*/
 
 Select Perro.Nombre
 From Perro
