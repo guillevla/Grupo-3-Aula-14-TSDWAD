@@ -12,6 +12,8 @@ create table Dueno(
 	Direccion varchar(100) null
 );
 
+/*---------------------------------EJERCICIO NÚMERO 1-------------------------------------*/
+
 create table Perro(
 	Id_Perro int not null primary key ,
 	Nombre varchar(25) not null,
@@ -37,8 +39,6 @@ Values	(13526987, "Celestino", "Vera", "359426785", "Corrientes 29"),
         (28957346, "Juan", "Perez", 4789689, "Belgrano 101"),
         (21436557, "Pedro", "Gomez", 480237158, "San Martín 1120");
         
-/*---------------------------------EJERCICIO NÚMERO 1-------------------------------------*/
-
 Insert Into Perro (Id_Perro, Nombre, Fecha_Nac, Sexo, Dni_Dueno)
 Values	(13, "Puppy", "2012-3-5" , "Macho", 13526987),
 		(14, "Lennon", "2012-12-12" , "Macho", 23546987),
