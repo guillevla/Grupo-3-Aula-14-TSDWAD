@@ -3,14 +3,15 @@ CREATE DATABASE peluqueriaCanina;
 use peluqueriaCanina;
 
 Create table Dueno (
-    DNI varchar(9),
+    DNI varchar(9), 
     Nombre varchar(20),
     Apellido varchar(20) ,
     Teléfono varchar(20),
     Direccion varchar(50),
     constraint pk_dni primary key (DNI)
 );
-
+/* Elijo usar varchar en lugar de int o bigint en DNI y Telefono porque esos número no los voy
+a utilizar para hacer operaciones y así requieren menos espacio*/
 Create table Perro (
     ID_Perro int not null auto_increment,
     Nombre varchar(20) not null,
@@ -31,7 +32,13 @@ Create table Historial(
     constraint fk_idperro foreign key (Perro) references Perro(ID_Perro)
 );
 
---Inserte en la tabla correspondiente un nuevo animal (perro) como paciente y el dueño asociado a ese animal.
+/*Inserte en la tabla correspondiente un nuevo animal (perro) como paciente y el dueño asociado a ese animal.*/
 
 INSERT INTO Dueno VALUES ('23645785', 'Olivia', 'Gutierrez', '2995601478', 'Los Tilos 5500');
 INSERT INTO Perro(Nombre, Fecha_nac, Sexo, DNI_dueno) VALUES ('Fox', '2017-09-01', 'M', '23645785' );
+
+/*Obtener los ingresos percibidos en Julio del 2022 */ 
+
+SELECT SUM(Monto) FROM Historial WHERE Fecha BETWEEN '2022-07-01' and '2022-07-31';
+
+SELECT SUM(Monto) FROM Historial WHERE month(Fecha) = '07' and year(Fecha) = '2022'
